@@ -3,3 +3,10 @@
   tasks:
   - name: ping the server
     ansible.built.in.ping:
+
+
+- name: PING
+  hosts: web
+  tasks: # task=module=collection
+  - name: ping the server
+    ansible.builtin.ping:
