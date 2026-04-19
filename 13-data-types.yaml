@@ -16,5 +16,5 @@
       containerization: docker
   tasks:
   - name: Print course information
-    ansible.builtin.debug
+    ansible.builtin.debug:
       msg: "Hello im learing {{ course_name }}, Duration: {{ Duration }}, topics are: {{ topics }},is it {{ live }}"
