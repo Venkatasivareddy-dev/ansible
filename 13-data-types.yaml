@@ -1,6 +1,6 @@
 - name: Devops course information
-  hosts: local
-  hosts: backend
+  hosts: local,backend
+  # hosts: backend
   connection: local
   vars:
     course_name: "Devops with AWS" #string
