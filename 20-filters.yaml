@@ -4,4 +4,10 @@
   tasks:
   - name: handle undefilne variables
     ansible.builtin.debug:
-      msg: "Hello {{ person | default ( 'Ramesh')}}"
+      msg: "Hello {{ person | default ('Ramesh') }}"
+
+  - name: convert list to string
+    vars:
+      fruits: "apple,mangoe,banana"
+    ansible.builtin.debug:
+      msg: "fruits are: {{ fruits | split(',') }}"
