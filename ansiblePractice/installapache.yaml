@@ -7,10 +7,23 @@
       yum:
         name: httpd
         state: present
-
     - name: Start and enable https service
       service:
-      name: httpd
-      state: started
-      enabled: yes
+        name: httpd
+        state: started
+        enabled: yes
 
+
+- name:
+  hosts: webserver
+  become: yes
+  tasks:
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present
+    - name: Start and enable httpd service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
